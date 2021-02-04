@@ -1,0 +1,29 @@
+{
+  "name": "scte35-js",
+  "version": "1.0.0",
+  "description": "JS test harness for RealEyes Kotlin Multiplatform project for SCTE-35 parsing",
+  "main": "index.js",
+  "scripts": {
+    "build": "./gradlew clean && ./gradlew build",
+    "postinstall": "npm run build",
+    "link": "cd build/js/packages/scte35decoder && npm link",
+    "prestart": "npm run link && npm link scte35decoder",
+    "start": "node index.js",
+    "test": "node build/js/packages/scte35decoder-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realeyes-media/scte35-js.git"
+  },
+  "keywords": [
+    "SCTE-35",
+    "Kotlin",
+    "Multiplatform"
+  ],
+  "author": "RealEyes Media, Inc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realeyes-media/scte35-js/issues"
+  },
+  "homepage": "https://github.com/realeyes-media/scte35-js#readme"
+}
